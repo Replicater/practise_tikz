@@ -1,0 +1,33 @@
+#!/usr/bin/gnuplot -persist
+
+set terminal png
+set output 'none_p.png'
+set yrange [-27:27]
+set arrow from -5,0 to 5,0 nohead
+plot [-5:5] x*x + 1
+set output
+set output 'none_n.png'
+set yrange [-27:27]
+plot [-5:5] -x*x - 1
+set arrow from -5,0 to 5,0 nohead
+set output
+set output 'one_p.png'
+set yrange [-27:27]
+plot [-5:5] x*x 
+set arrow from -5,0 to 5,0 nohead
+set output
+set output 'one_n.png'
+set yrange [-27:27]
+plot [-5:5] -x*x
+set arrow from -5,0 to 5,0 nohead
+set output
+set output 'two_p.png'
+set yrange [-27:27]
+plot [-5:5] x*x - 1 
+set arrow from -5,0 to 5,0 nohead
+set output
+set output 'two_n.png'
+set yrange [-27:27]
+plot [-5:5] -x*x + 1
+set arrow from -5,0 to 5,0 nohead
+set output
